@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NavBar from "./components/navbar";
 import Hero from "./components/Hero";
 import HighlightsGrid from "./components/HighlightsGrid";
-import Menu from "./components/menu";
+import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import EntryAnimation from "./components/intro";
 import ArchivesGallery from "./components/ArchivesGallery";
