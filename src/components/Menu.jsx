@@ -65,7 +65,7 @@ export default function Menu() {
 
             {/* MENU IMAGE */}
             <img
-              src="../assets/menu.jpeg"
+              src="src/assets/menu.jpeg"
               alt="Comienzo Menu"
               className="
                 w-full 
