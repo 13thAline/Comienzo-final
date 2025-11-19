@@ -1,5 +1,6 @@
 // src/components/Menu.jsx
 import React, { useState } from "react";
+import menu from "../assets/menu.jpeg";
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
@@ -65,7 +66,7 @@ export default function Menu() {
 
             {/* MENU IMAGE */}
             <img
-              src="src/assets/menu.jpeg"
+              src={menu}
               alt="Comienzo Menu"
               className="
                 w-full 
@@ -95,7 +96,7 @@ export default function Menu() {
           onClick={() => setOpen(false)}
         >
           <img
-            src="src/assets/menu.jpeg"
+            src="{menu}"
             alt="Menu Enlarged"
             onClick={(e) => e.stopPropagation()}
             className="
