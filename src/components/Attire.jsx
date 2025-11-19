@@ -12,7 +12,10 @@ export default function Attire() {
 
       {/* Title */}
       <div className="relative z-10 px-6 md:px-12 mb-12 flex flex-col items-center text-center">
-        <h1 className="text-5xl md:text-8xl font-black text-white leading-none tracking-tighter mb-4">
+        <h1 
+          className="text-5xl md:text-8xl font-extrabold text-white leading-none tracking-tight mb-4 uppercase"
+          style={{ fontFamily: "Limelight, cursive" }}
+        >
           THE{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">
             ATTIRE

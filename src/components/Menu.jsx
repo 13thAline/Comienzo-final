@@ -1,5 +1,6 @@
 // src/components/Menu.jsx
 import React, { useState } from "react";
+import { X } from "lucide-react";   // ⬅️ Added cut icon import
 import menu from "../assets/menu.jpeg";
 
 export default function Menu() {
@@ -13,7 +14,10 @@ export default function Menu() {
           
           {/* 🌟 STYLIZED "THE SPREAD" TITLE 🌟 */}
           <div className="relative z-10 px-6 md:px-12 mb-12 flex flex-col items-center text-center">
-            <h1 className="text-5xl md:text-8xl font-black text-white leading-none tracking-tighter mb-4 uppercase">
+            <h1
+              className="text-5xl md:text-8xl font-black text-white leading-none tracking-tighter mb-4 uppercase"
+              style={{ fontFamily: "Limelight, cursive" }}
+            >
               THE{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">
                 SPREAD
@@ -36,7 +40,7 @@ export default function Menu() {
             onClick={() => setOpen(true)}
           >
 
-            {/* --- NEW MENU COVER (UPDATED FOR PHONES) --- */}
+            {/* --- MENU COVER (Phones) --- */}
             {!open && (
               <div
                 className="
@@ -57,12 +61,12 @@ export default function Menu() {
                     bg-gradient-to-r from-yellow-300 to-yellow-500
                     animate-pulse
                   "
+                  style={{ fontFamily: 'Limelight, cursive' }}
                 >
                   TAP TO REVEAL
                 </p>
               </div>
             )}
-            {/* --- END NEW MENU COVER --- */}
 
             {/* MENU IMAGE */}
             <img
@@ -95,6 +99,27 @@ export default function Menu() {
           "
           onClick={() => setOpen(false)}
         >
+
+          {/* ❌ CUT / CLOSE ICON */}
+          <button
+            className="
+              absolute top-5 right-5
+              p-2 rounded-full
+              bg-white/20 backdrop-blur-md
+              border border-white/30
+              hover:bg-yellow-300 hover:text-black
+              transition-all
+              text-white
+            "
+            onClick={(e) => {
+              e.stopPropagation(); // prevents closing from parent
+              setOpen(false);
+            }}
+          >
+            <X size={30} />
+          </button>
+
+          {/* IMAGE */}
           <img
             src={menu}
             alt="Menu Enlarged"

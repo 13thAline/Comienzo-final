@@ -15,21 +15,29 @@ export default function Venue() {
           backgroundImage: 'url("src/assets/worldmap.png")', 
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
-          // Applying filters to make the map blend seamlessly with the dark gradient:
           filter: 'grayscale(100%) brightness(50%)' 
         }}
       ></div>
 
       <div className="max-w-6xl w-full px-6 relative z-10">
 
-        {/* 🌟 STYLIZED VENUE TITLE 🌟 */}
+        {/* 🌟 STYLIZED VENUE TITLE WITH LIMELIGHT FONT 🌟 */}
         <div className="relative z-10 px-6 md:px-12 mb-12 flex flex-col items-center text-center">
-            <h1 className="text-5xl md:text-8xl font-black text-white leading-none tracking-tighter mb-4 uppercase">
-                THE <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">SPACE</span>
-            </h1>
+          <h1 
+            className="
+              text-5xl md:text-8xl font-extrabold 
+              text-white leading-none tracking-tight uppercase
+            "
+            style={{ fontFamily: "Limelight, cursive" }}
+          >
+            THE{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">
+              SPACE
+            </span>
+          </h1>
         </div>
         
-        {/* CONTAINER FOR MAP (Full width) */}
+        {/* CONTAINER FOR MAP */}
         <div className="flex justify-center">
 
           {/* 🌟 Map Embed 🌟 */}

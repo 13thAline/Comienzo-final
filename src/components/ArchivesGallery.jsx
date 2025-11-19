@@ -10,35 +10,40 @@ const randomRotation = () => {
 export default function ArchivesGallery({ photos }) {
   return (
     <section id="gallery" className="w-full py-20 bg-transparent">
+      
       {/* TITLE */}
-      <h2 className="text-center text-4xl md:text-5xl font-extrabold text-yellow-300 tracking-wide mb-3 drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">
+      <h2
+        className="text-center text-4xl md:text-5xl font-extrabold text-yellow-300 tracking-wide mb-3 drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] uppercase"
+        style={{ fontFamily: "Limelight, cursive" }}
+      >
         FROM THE ARCHIVES
       </h2>
 
       <p className="text-center text-white/70 text-lg mb-12">
-        A scrapbook of unforgettable moments ✦
+        A scrapbook of unforgettable moments 
       </p>
 
       {/* GRID */}
-      <div className="
+      <div
+        className="
         max-w-6xl mx-auto 
         grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
         gap-10 px-6
-        
-      ">
+      "
+      >
         {photos.map((p, index) => (
           <motion.div
             key={index}
-            className="relative relative bg-[#f3ead7]
-            p-4 rounded-xl shadow-2xl "
+            className="relative bg-[#f3ead7] p-4 rounded-xl shadow-2xl"
             style={{ rotate: `${randomRotation()}deg` }}
             whileHover={{ scale: 1.07, rotate: 0 }}
             transition={{ type: "spring", stiffness: 200, damping: 12 }}
           >
             {/* Masking Tape */}
-            <div className="absolute top-[-14px] left-1/2 -translate-x-1/2 
-              w-24 h-6 bg-yellow-200/70 rounded-sm shadow-md opacity-80 rotate-[-3deg]">
-            </div>
+            <div
+              className="absolute top-[-14px] left-1/2 -translate-x-1/2 
+              w-24 h-6 bg-yellow-200/70 rounded-sm shadow-md opacity-80 rotate-[-3deg]"
+            />
 
             {/* PHOTO */}
             <img

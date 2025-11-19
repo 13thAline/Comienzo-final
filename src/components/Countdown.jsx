@@ -59,11 +59,21 @@ export default function Countdown({ targetDate, onEnd }) {
   return (
     <div className="flex flex-col items-center gap-6 pt-12">
 
-      <h3 className="text-white/80 text-xs tracking-widest uppercase drop-shadow-[0_0_30px_white]">
+      {/* UPDATED T MINUS */}
+      <h3
+        className="
+          text-white/90 
+          text-2xl md:text-3xl 
+          tracking-[0.4em] 
+          uppercase 
+          drop-shadow-[0_0_18px_rgba(255,255,170,0.9)]
+        "
+        style={{ fontFamily: 'Limelight, cursive' }}
+      >
         T MINUS
       </h3>
 
-     <div className="grid grid-cols-2 gap-8 lg:flex lg:gap-8">
+      <div className="grid grid-cols-2 gap-8 lg:flex lg:gap-8">
         <Circle value={days} label="Days" delay={0} />
         <Circle value={pad(hours)} label="Hours" delay={0.2} />
         <Circle value={pad(minutes)} label="Minutes" delay={0.4} />
@@ -97,7 +107,18 @@ function Circle({ value, label, delay }) {
         </span>
       </motion.div>
 
-      <span className="mt-2 text-white/70 text-xs uppercase tracking-wider">
+      {/* UPDATED LABELS */}
+      <span
+        className="
+          mt-2 
+          text-white/90 
+          text-sm md:text-base 
+          uppercase 
+          tracking-[0.3em]
+          drop-shadow-[0_0_12px_rgba(255,255,170,0.8)]
+        "
+        style={{ fontFamily: "Limelight, cursive" }}
+      >
         {label}
       </span>
     </div>

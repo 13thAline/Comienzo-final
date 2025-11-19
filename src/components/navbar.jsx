@@ -13,7 +13,7 @@ export default function NavBar() {
     setOpen(false);
   };
 
-  const navItems = ["events", "venue","attire", "menu", "gallery", ];
+  const navItems = [ "venue","attire","events","menu", "gallery", ];
 
   return (
     <>
@@ -131,7 +131,7 @@ export default function NavBar() {
             "
           >
             <ul className="flex flex-col items-center gap-6 text-white text-lg tracking-wide">
-              {["home", "events","attire","venue", "menu"].map((item) => (
+              {["venue","attire", "events","menu", "gallery"].map((item) => (
                 <li
                   key={item}
                   className="hover:text-yellow-300 transition cursor-pointer"
