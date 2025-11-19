@@ -11,7 +11,7 @@ import { useDrag } from "@use-gesture/react";
 
 import Latent from "../assets/Latent.jpg";
 import fiesta from "../assets/fiesta.jpg";
-import jamming from "../assets/jamming.jpg";
+import jamming from "../assets/Jamming.jpg";
 import soon from "../assets/ComingSoon.jpg";
 // --- 1. THE 3D TILT WRAPPER (Inner Card Effect) ---
 const TiltCard = ({ children, className, spotlightColor = "rgba(253, 224, 71, 0.3)" }) => {
