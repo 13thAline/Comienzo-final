@@ -96,7 +96,7 @@ export default function Menu() {
           onClick={() => setOpen(false)}
         >
           <img
-            src="{menu}"
+            src={menu}
             alt="Menu Enlarged"
             onClick={(e) => e.stopPropagation()}
             className="
