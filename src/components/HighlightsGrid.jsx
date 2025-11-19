@@ -212,7 +212,7 @@ export default function HighlightsGrid() {
       {/* 3D CAROUSEL AREA */}
       <div 
         ref={containerRef}
-        className="relative h-[500px] w-full flex items-center justify-center perspective-1000 cursor-grab active:cursor-grabbing touch-none"
+        className="relative h-[500px] w-full flex items-center justify-center perspective-1000 cursor-grab active:cursor-grabbing touch-pan-y"
         {...bind()}
       >
         {/* CARDS CONTAINER CENTERED */}
